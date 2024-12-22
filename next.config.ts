@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  output: 'export', // Garante que o Next.js gere um site estático na pasta "out"
+  output: "export",
+  images: {
+    unoptimized: true, // Necessário para imagens em projetos exportados estaticamente
+  },
+  distDir: "out", // Pasta onde os arquivos exportados são gerados
 };
 
 module.exports = nextConfig;
